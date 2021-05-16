@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOLKOV-COLLECTION CONSTRUCTOR</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" lang="scss" />
+    <script defer src="js/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <div class="constructor" id="constructor">
+      <div class="constructor-view">
+        <div class="full wall">
+          <div class="full color" id="constructor-wall-color"></div>
+          <div class="full texture"></div>
+        </div>
+        <div class="full interior"></div>
+        <div class="full image" id="constructor-interior-image"></div>
+        <div class="picture" id="constructor-picture">
+          <div class="picture-technology picture-photo"></div>
+          <div class="picture-technology picture-plasticization">
+            <div class="plasticization-right"></div>
+            <div class="plasticization-bottom"></div>
+            <div class="plasticization-main"></div>
+            <div class="plasticization-glass-right"></div>
+            <div class="plasticization-glass-bottom"></div>
+            <div class="plasticization-glass-texture"></div>
+          </div>
+          <div class="picture-technology picture-border">
+            <div class="border-main"></div>
+            <div class="border-box">
+              <div class="border border-top">
+                <div class="border-image"></div>
+              </div>
+              <div class="border border-right">
+                <div class="border-image"></div>
+              </div>
+              <div class="border border-bottom">
+                <div class="border-image"></div>
+              </div>
+              <div class="border border-left">
+                <div class="border-image"></div>
+              </div>
+            </div>
+          </div>
+          <div class="picture-technology picture-mat">
+            <div class="mat-outer">
+              <div class="mat-main"></div>
+            </div>
+            <div class="border-box">
+              <div class="border border-top">
+                <div class="border-image"></div>
+              </div>
+              <div class="border border-right">
+                <div class="border-image"></div>
+              </div>
+              <div class="border border-bottom">
+                <div class="border-image"></div>
+              </div>
+              <div class="border border-left">
+                <div class="border-image"></div>
+              </div>
+            </div>
+          </div>
+          <div class="picture-technology picture-canvas show">
+            <div class="picture-canvas-right">
+              <div class="canvas-picture">
+                <div class="canvas-texture"></div>
+              </div>
+              <div class="picture-canvas-right-tint"></div>
+            </div>
+            <div class="picture-canvas-bottom">
+              <div class="canvas-picture">
+                <div class="canvas-texture"></div>
+              </div>
+              <div class="picture-canvas-bottom-tint"></div>
+            </div>
+            <div class="picture-canvas-main">
+              <div class="canvas-texture"></div>
+            </div>
+          </div>
+        </div>
+        <div class="constructor-interior">
+          <div class="item item-description">
+            Описание <span class="icon icon-interior-description"></span>
+          </div>
+          <div class="item item-photo">
+            Другое фото <span class="icon icon-interior-another-photo"></span>
+          </div>
+          <div class="item item-interior">
+            Интерьер
+            <div class="interiors" id="constructor-interiors">
+              <div class="interior light" data-interior="light">
+                <div class="icon icon-interior-tone"></div>
+              </div>
+              <div class="interior dark" data-interior="dark">
+                <div class="icon icon-interior-tone"></div>
+              </div>
+              <div class="interior color" data-interior="color">
+                <div class="icon icon-interior-tone"></div>
+              </div>
+            </div>
+          </div>
+          <div class="item item-color">
+            <div class="name">Цвет стены</div>
+            <div class="colors" id="constructor-colors"></div>
+          </div>
+        </div>
+      </div>
+      <div class="constructor-config" id="constructor-config">
+        <div class="inner">
+          <div class="title">Выбрать конфигурацию</div>
+          <div class="item">
+            <div class="title">Размер фотографии (см)</div>
+            <div class="sizes" id="constructor-sizes"></div>
+          </div>
+          <div class="item">
+            <div class="item-check">
+              <div class="main">
+                <div
+                  class="checkbox"
+                  data-technology-id="plasticization"
+                  data-radio-group="technology"
+                ></div>
+                <div class="text">Пластификация</div>
+              </div>
+              <div class="more">
+                <div class="text">Подробнее</div>
+                <div class="icon icon-config-info"></div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-check">
+              <div class="main">
+                <div
+                  class="checkbox"
+                  data-technology-id="canvas"
+                  data-radio-group="technology"
+                ></div>
+                <div class="text">Холст галерейный премиум</div>
+              </div>
+              <div class="more">
+                <div class="text">Подробнее</div>
+                <div class="icon icon-config-info"></div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-check">
+              <div class="main">
+                <div
+                  class="checkbox"
+                  data-technology-id="border"
+                  data-radio-group="technology"
+                ></div>
+                <div class="text">Классическое оформление в раму</div>
+              </div>
+              <div class="more">
+                <div class="text">Подробнее</div>
+                <div class="icon icon-config-info"></div>
+              </div>
+            </div>
+            <div class="borders" id="constructor-borders"></div>
+          </div>
+          <div class="item">
+            <div class="title">Цвет/Вид рамы</div>
+            <div class="item-check">
+              <div class="main">
+                <div
+                  class="checkbox"
+                  data-technology-id="mat"
+                  data-radio-group="technology"
+                ></div>
+                <div class="text">Паспарту</div>
+              </div>
+              <div class="more">
+                <div class="text">Подробнее</div>
+                <div class="icon icon-config-info"></div>
+              </div>
+            </div>
+            <div class="mats" id="constructor-mats"></div>
+          </div>
+          <div class="result">
+            <div class="price-info">
+              <div class="text">
+                Стоимость выбранной конфигурации, включая доставку по России
+              </div>
+              <div class="price">
+                <span class="value" id="constructor-price-counted"
+                  >100 000</span
+                >
+                руб.
+              </div>
+            </div>
+            <div class="action">
+              <div class="quantity" id="constructor-quantity">
+                <div class="dec">-</div>
+                <span class="value">2500</span> <span class="units">шт</span>
+                <div class="inc">+</div>
+              </div>
+              <button class="to-basket">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script defer src="js/constructor.js"></script>
+  </body>
+</html>

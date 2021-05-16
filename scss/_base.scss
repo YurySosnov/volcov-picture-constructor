@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212221;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.full {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
